@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Firebase Website</h1>
-    <p id="timeValue">Time:</p>
+    <p id="voltageValue">Voltage:</p>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
@@ -26,11 +26,11 @@
         const firebaseApp = initializeApp(firebaseConfig);
         const database = getDatabase(firebaseApp);
 
-        const timeRef = ref(database, 'time');
+        const voltageRef = ref(database, 'voltage');
 
-        onValue(timeRef, (snapshot) => {
-            const data = snapshot.val();
-            document.getElementById('timeValue').textContent = `Time: ${data}`;
+        onValue(voltageRef, (snapshot) => {
+            const voltage = snapshot.val();
+            document.getElementById('voltageValue').textContent = `Voltage: ${voltage}`;
         });
     </script>
 </body>
