@@ -9,10 +9,11 @@
     <h1>Firebase Website</h1>
     <p id="timeValue">Time:</p>
 
-    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-database.js"></script>
-    <script>
-      const firebaseConfig = {
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+        
+        const firebaseConfig = {
           apiKey: "AIzaSyA4EPFB2SCUSUVc9RkDDUXIlcWhIhwCJxM",
           authDomain: "esp32db-1c7ed.firebaseapp.com",
           databaseURL: "https://esp32db-1c7ed-default-rtdb.europe-west1.firebasedatabase.app",
@@ -20,17 +21,17 @@
           storageBucket: "esp32db-1c7ed.appspot.com",
           messagingSenderId: "111577244132",
           appId: "1:111577244132:web:b1922e549685d262c727f1"
-      };
+        };
 
-      firebase.initializeApp(firebaseConfig);
+        const firebaseApp = initializeApp(firebaseConfig);
+        const database = getDatabase(firebaseApp);
 
-      const database = firebase.database();
+        const timeRef = ref(database, 'time');
 
-      const timeRef = database.ref('time');
-      timeRef.on('value', (snapshot) => {
-          const timeValue = snapshot.val();
-          document.getElementById('timeValue').textContent = `Time: ${timeValue}`;
-      });
+        onValue(timeRef, (snapshot) => {
+            const data = snapshot.val();
+            document.getElementById('timeValue').textContent = `Time: ${data}`;
+        });
     </script>
 </body>
 </html>
