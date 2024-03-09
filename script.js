@@ -1,5 +1,4 @@
 // Import the functions you need from the SDKs you need
-import Highcharts from "highcharts";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
