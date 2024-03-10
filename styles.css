@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    --value: 2%;
+    --value: 0%;
     background: conic-gradient(#66FCF1 var(--value), transparent 0);
     position: absolute;
 }
@@ -16,6 +16,7 @@
     display: inline-block;
     width: 200px;
     height: 200px;
+    margin: 0 120px;
   }
   
   .circular-progress-circle {
@@ -50,4 +51,11 @@
     font-size: 38px; 
     font-weight: bold;
     font-family: "Segoe UI", sans-serif; 
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
