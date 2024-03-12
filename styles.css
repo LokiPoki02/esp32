@@ -14,8 +14,8 @@
 .circular-progress {
     position: relative;
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin: 0 120px;
   }
   
@@ -48,7 +48,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #0B0C10; 
-    font-size: 38px; 
+    font-size: 34px; 
     font-weight: bold;
     font-family: "Segoe UI", sans-serif; 
 }
@@ -56,6 +56,6 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; 
+  /* align-items: center; */
+  height: 250vh; 
 }

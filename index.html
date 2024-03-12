@@ -8,30 +8,28 @@
 </head>
 <body style="background-color: #1F2833;">
     <div class="container">
-    <div class="circular-progress">
-        <div class="circular-progress-circle"></div>
-        <div class="pie-chart-left"></div>
-        <div class="pie-chart-right"></div>
-        <div class="circular-progress-inner"></div>
-        <span class="progress-value"></span>
-        <script src="script.js" type="module"></script>
+        <div class="circular-progress" id="voltage">
+            <div class="circular-progress-circle"></div>
+            <div class="pie-chart-left voltage-left"></div>
+            <div class="pie-chart-right voltage-right"></div>
+            <div class="circular-progress-inner"></div>
+            <span class="progress-value voltage-value"></span>
+        </div>
+        <div class="circular-progress" id="current">
+            <div class="circular-progress-circle"></div>
+            <div class="pie-chart-left current-left"></div>
+            <div class="pie-chart-right current-right"></div>
+            <div class="circular-progress-inner"></div>
+            <span class="progress-value current-value"></span>
+        </div>
+        <div class="circular-progress" id="power">
+            <div class="circular-progress-circle"></div>
+            <div class="pie-chart-left power-left"></div>
+            <div class="pie-chart-right power-right"></div>
+            <div class="circular-progress-inner"></div>
+            <span class="progress-value power-value"></span>
+        </div>
+    <script src="instantValues.js" type="module"></script>
     </div>
-    <div class="circular-progress">
-        <div class="circular-progress-circle"></div>
-        <div class="pie-chart-left"></div>
-        <div class="pie-chart-right"></div>
-        <div class="circular-progress-inner"></div>
-        <span class="progress-value"></span>
-    </div>
-    <div class="circular-progress">
-        <div class="circular-progress-circle"></div>
-        <div class="pie-chart-left"></div>
-        <div class="pie-chart-right"></div>
-        <div class="circular-progress-inner"></div>
-        <span class="progress-value"></span>
-    </div>
-</div>
-
-    
 </body>
 </html>
